@@ -43,7 +43,7 @@ const JupyterComponent = () => {
     setCurrentShow(selectedCode);
 
     try {
-      const response = await axios.post('http://127.0.0.1:5000/execute', formData, {
+      const response = await axios.post('https://machine-learning-8nax.onrender.com/execute', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setOutput(response.data.output);
