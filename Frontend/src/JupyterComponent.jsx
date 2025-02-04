@@ -56,7 +56,7 @@ const JupyterComponent = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center py-10 px-4">
    
-      <h1 className="text-4xl font-bold mb-8 text-blue-400">Jupyter Notebook Execution</h1>
+      <h1 className="text-4xl font-bold mb-8 text-blue-400">Machine Learning Execution</h1>
 
       <div className="w-full  bg-gray-800 p-8 rounded-lg shadow-lg mb-8">
         <div className="flex w-3/4 flex-col md:flex-row gap-6">
@@ -77,8 +77,8 @@ const JupyterComponent = () => {
             </select>
         </div>
 
-  <div className="flex flex-row  justify-center space-y-2">
-  <label className="cursor-pointer flex items-center space-x-2 bg-blue-600 px-6 py-3 rounded-lg hover:bg-blue-500 transition transform hover:scale-105 active:scale-95">
+  <div className="flex flex-row  justify-center items-end ">
+  <label className="cursor-pointer  flex items-center space-x-2 bg-blue-600 px-6 py-3 rounded-lg hover:bg-blue-500 transition transform hover:scale-105 active:scale-95">
     <FaUpload className="text-xl" />
     <span className="text-lg font-medium">Upload File</span>
     <input
@@ -91,16 +91,18 @@ const JupyterComponent = () => {
 
 
   {file && (
-    <p className="text-sm text-gray-400 bg-gray-700 px-3 py-1 rounded-md">
-      Uploaded: <span className="font-semibold text-gray-200">{file.name}</span>
+    <div className="flex items-center justify-center ml-5">
+    <p className="text-sm text-gray-400 bg-gray-700 px-3 py-3.5 align-items-center h-13  justify-content-center rounded-md">
+      Uploaded: <span className="font-semibold text-gray-200 align-items-center  justify-content-center">{file.name}</span>
     </p>
+    </div>
   )}
 </div>
         </div>
       </div>
 
 
-      <div className="w-full max-w-6xl flex flex-col md:flex-row gap-6">
+      <div className="w-full flex flex-col md:flex-row gap-6">
   
         <div className="w-full md:w-1/2 bg-gray-800 p-6 rounded-lg shadow-lg">
           <h3 className="text-xl font-semibold mb-4 text-gray-200">Input (CSV Content)</h3>
